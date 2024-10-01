@@ -19,5 +19,9 @@ public class Arrow : MonoBehaviour {
         set { rigid.isKinematic = value; }
 
     }
+
+    void OnTriggerEnter() {
+        kinematic = true;
+    }
 }
 
