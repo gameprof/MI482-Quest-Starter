@@ -20,7 +20,9 @@ public class QuVR : MonoBehaviour {
     [BoxGroup( "Left Hand" )] public bool y;
     [BoxGroup( "Left Hand" )] public bool menu;
     [Range(0,1)]
-    [BoxGroup( "Left Hand" )] public float lTrigger, lGrip, lThumbX, lThumbY;
+    [BoxGroup( "Left Hand" )] public float lTrigger, lGrip;
+    [Range(-1,1)]
+    [BoxGroup( "Left Hand" )] public float lThumbX, lThumbY;
     [BoxGroup( "Left Hand" )] public Vector2 lThumbStick; 
 
     
@@ -31,7 +33,9 @@ public class QuVR : MonoBehaviour {
     [BoxGroup( "Right Hand" )] public bool b;
     [BoxGroup( "Right Hand" )] public bool meta;
     [Range(0,1)]
-    [BoxGroup( "Right Hand" )] public float rTrigger, rGrip, rThumbX, rThumbY;
+    [BoxGroup( "Right Hand" )] public float rTrigger, rGrip;
+    [Range(-1,1)]
+    [BoxGroup( "Right Hand" )] public float rThumbX, rThumbY;
     [BoxGroup( "Right Hand" )] public Vector2 rThumbStick; 
     
     

@@ -53,7 +53,7 @@ public class BowAndArrow : MonoBehaviour {
         currentArrow.kinematic = false;
         float shotSpeed = ( 1 - drawPercent ) * minShotSpeed + drawPercent * maxShotSpeed;
         currentArrow.vel = currentArrow.forward * shotSpeed;
-        Debug.Log( shotSpeed );
+        Debug.LogWarning( $"ShotSpeed: {shotSpeed}\tDrawPercent: {drawPercent}" );
         currentArrow = null;
     }
 
