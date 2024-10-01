@@ -4361,7 +4361,7 @@ GameObject:
   - component: {fileID: 798100259}
   - component: {fileID: 798100258}
   m_Layer: 0
-  m_Name: QuVR
+  m_Name: --QuVR--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4379,10 +4379,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 573e1037fcad9c6419401f4252104e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowPrefab: {fileID: 0}
+  arrowPrefab: {fileID: 8298691156450759838, guid: e9ecaec85c0c47642ad576bfcd39e5e2, type: 3}
   maxDrawDistance: 1
-  minShotSpeed: 10
-  maxShotSpeed: 100
+  minShotSpeed: 1
+  maxShotSpeed: 10
   state: 0
   currentArrow: {fileID: 0}
   drawDist: 0
@@ -8991,10 +8991,10 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 798100260}
   - {fileID: 2080101472}
   - {fileID: 1470509163}
   - {fileID: 81954964}
   - {fileID: 346664030}
   - {fileID: 194272445}
   - {fileID: 776403643}
-  - {fileID: 798100260}

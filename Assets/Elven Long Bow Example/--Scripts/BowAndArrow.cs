@@ -8,8 +8,8 @@ public class BowAndArrow : MonoBehaviour {
     [Header( "Inscribed" )]
     public GameObject arrowPrefab;
     public float maxDrawDistance = 1;
-    public float minShotSpeed    = 10;
-    public float maxShotSpeed    = 100;
+    public float minShotSpeed    = 1;
+    public float maxShotSpeed    = 10;
     
     public enum eState { none, drawing }
     [Header( "Dynamic" )]
