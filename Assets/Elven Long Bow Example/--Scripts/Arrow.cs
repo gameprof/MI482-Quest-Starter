@@ -2,7 +2,6 @@
 using UnityEngine;
 using NaughtyAttributes;
 
-[RequireComponent(typeof(Rigidbody))]
 public class Arrow : MonoBehaviour {
     public bool  drawEntryDepthDebug    = false;
     public float speedForFullEntryDepth = 100;
@@ -92,6 +91,11 @@ public class Arrow : MonoBehaviour {
             trans.position = nockPos;
             if (drawEntryDepthDebug) Debug.DrawLine( prevPosList[0], nockPos, Color.green, 1000 );
             if (drawEntryDepthDebug) Debug.DrawLine( nockPos, nextPos, Color.yellow, 1000 );
+
+            Transform t = GetTargetRoot( coll.transform );
+            trans.SetParent( t );
+            Destroy( rigid );
+            Destroy( this );
         } else {
             if (drawEntryDepthDebug) Debug.DrawLine( prevPosList[^2], nextPos, Color.red, 1000 );
         }
@@ -119,6 +123,15 @@ public class Arrow : MonoBehaviour {
             collisionCount = maxRicochetCollisions + 1;
         }
         
+    }
+
+    /// <summary>
+    /// This doesn't do anything yet!
+    /// </summary>
+    /// <param name="t"></param>
+    /// <returns></returns>
+    Transform GetTargetRoot( Transform t ) {
+        return t;
     }
 }
 
