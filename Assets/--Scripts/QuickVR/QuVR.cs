@@ -33,14 +33,15 @@ namespace QuickVR {
         [Header( "Dynamic Controller State" )]
         [BoxGroup( "Right Hand" )] public QuVR_ButtonState a;
         [BoxGroup( "Right Hand" )] public QuVR_ButtonState b;
-        [BoxGroup( "Right Hand" )] public QuVR_ButtonState meta;
+        // [BoxGroup( "Right Hand" )] public QuVR_ButtonState meta;
         [Range( 0, 1 )]
         [BoxGroup( "Right Hand" )] public float rTrigger, rGrip;
         [Range( -1, 1 )]
         [BoxGroup( "Right Hand" )] public float rThumbX, rThumbY;
         [BoxGroup( "Right Hand" )] public Vector2 rThumbStick;
 
-        public eQuVR_ProgressOn progressButtonsOn = eQuVR_ProgressOn.update;
+        public eQuVR_ProgressOn progressButtonsOn    = eQuVR_ProgressOn.update;
+        public bool             debugButtonDownAndUp = false;
         
         void Start() {
             S = this;
@@ -61,7 +62,7 @@ namespace QuickVR {
             QuVR_State.PROGRESS_STATES += menu.Progress;
             QuVR_State.PROGRESS_STATES += a.Progress;
             QuVR_State.PROGRESS_STATES += b.Progress;
-            QuVR_State.PROGRESS_STATES += meta.Progress;
+            // QuVR_State.PROGRESS_STATES += meta.Progress;
         }
 
         void DeRegisterQuVR_StateProgression() {
@@ -70,7 +71,7 @@ namespace QuickVR {
             QuVR_State.PROGRESS_STATES -= menu.Progress;
             QuVR_State.PROGRESS_STATES -= a.Progress;
             QuVR_State.PROGRESS_STATES -= b.Progress;
-            QuVR_State.PROGRESS_STATES -= meta.Progress;
+            // QuVR_State.PROGRESS_STATES -= meta.Progress;
         }
 
         
@@ -94,7 +95,7 @@ namespace QuickVR {
             // Right Hand
             a.Set( OVRInput.Get( OVRInput.Button.One, rightController ) );
             b.Set( OVRInput.Get( OVRInput.Button.Two, rightController ) );
-            meta.Set( OVRInput.Get( OVRInput.Button.Three, rightController ) );
+            // meta.Set( OVRInput.Get( OVRInput.Button.Three, rightController ) );
 
             rTrigger = OVRInput.Get( OVRInput.Axis1D.PrimaryIndexTrigger, rightController );
             rGrip = OVRInput.Get( OVRInput.Axis1D.PrimaryHandTrigger, rightController );
@@ -102,6 +103,25 @@ namespace QuickVR {
             rThumbStick = OVRInput.Get( OVRInput.Axis2D.PrimaryThumbstick, rightController );
             rThumbX = rThumbStick.x;
             rThumbY = rThumbStick.y;
+
+            if ( debugButtonDownAndUp ) {
+                // Button Down
+                if (a.down) Debug.LogWarning("A Down"  );
+                if (b.down) Debug.LogWarning("B Down"  );
+                // if (meta.down) Debug.LogWarning("Meta Down"  );
+                if (x.down) Debug.LogWarning("X Down"  );
+                if (y.down) Debug.LogWarning("Y Down"  );
+                if (menu.down) Debug.LogWarning("Menu Down"  );
+                
+                
+                // Button Up
+                if (a.up) Debug.LogWarning("A Up"  );
+                if (b.up) Debug.LogWarning("B Up"  );
+                // if (meta.up) Debug.LogWarning("Meta Up"  );
+                if (x.up) Debug.LogWarning("X Up"  );
+                if (y.up) Debug.LogWarning("Y Up"  );
+                if (menu.up) Debug.LogWarning("Menu Up"  );
+            }
         }
 
         private void FixedUpdate() {
@@ -114,7 +134,7 @@ namespace QuickVR {
         public static QuVR_ButtonState A => S.a;
         public static QuVR_ButtonState B => S.b;
         public static QuVR_ButtonState Menu => S.menu;
-        public static QuVR_ButtonState Meta => S.meta;
+        // public static QuVR_ButtonState Meta => S.meta;
 
         public static float LTrigger => S.lTrigger;
         public static float LGrip => S.lGrip;

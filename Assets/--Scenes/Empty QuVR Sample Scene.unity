@@ -2422,6 +2422,10 @@ PrefabInstance:
       propertyPath: rightHandAnchor
       value: 
       objectReference: {fileID: 2080101478}
+    - target: {fileID: 6552149501195178057, guid: aeeaae01b7acccb4ab1895bd082cdc0b, type: 3}
+      propertyPath: debugButtonDownAndUp
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8505898707230604188, guid: aeeaae01b7acccb4ab1895bd082cdc0b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
