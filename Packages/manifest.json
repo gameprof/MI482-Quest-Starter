@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.exninja.quickvr": "https://github.com/gameprof/QuickVR.git",
     "com.meta.xr.sdk.core": "68.0.2",
     "com.meta.xr.sdk.interaction.ovr": "68.0.2",
     "com.unity.collab-proxy": "2.5.1",

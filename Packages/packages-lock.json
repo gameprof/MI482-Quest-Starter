@@ -1,13 +1,14 @@
 {
   "dependencies": {
     "com.exninja.quickvr": {
-      "version": "file:com.exninja.quickvr",
+      "version": "https://github.com/gameprof/QuickVR.git",
       "depth": 0,
-      "source": "embedded",
+      "source": "git",
       "dependencies": {
         "com.meta.xr.sdk.core": "68.0.2",
         "com.unity.xr.oculus": "4.2.0"
-      }
+      },
+      "hash": "62f0d71cbc87126e472d6ab1543889ab646c8fb6"
     },
     "com.meta.xr.sdk.core": {
       "version": "file:com.meta.xr.sdk.core@68.0.2",
