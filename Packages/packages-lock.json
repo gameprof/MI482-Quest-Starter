@@ -6,7 +6,7 @@
       "source": "embedded",
       "dependencies": {
         "com.meta.xr.sdk.core": "68.0.2",
-        "com.dbrizov.naughtyattributes": "2.1.4"
+        "com.unity.xr.oculus": "4.2.0"
       }
     },
     "com.meta.xr.sdk.core": {

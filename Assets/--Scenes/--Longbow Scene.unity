@@ -3326,6 +3326,29 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1545183271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545183266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 573e1037fcad9c6419401f4252104e33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 8298691156450759838, guid: e9ecaec85c0c47642ad576bfcd39e5e2, type: 3}
+  minDrawDistance: 0.25
+  maxDrawDistance: 1
+  minShotSpeed: 1
+  maxShotSpeed: 100
+  bowstringTop: {fileID: 767319499}
+  bowstringBottom: {fileID: 687985091}
+  state: 0
+  currentArrow: {fileID: 0}
+  drawDist: 0
+  drawPercent: 0
 --- !u!1001 &1545968989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4981,15 +5004,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3030620061070837432, guid: a371ce623a776484cb6fed209413cf1d, type: 3}
+    - target: {fileID: 0}
       propertyPath: bowstringTop
       value: 
       objectReference: {fileID: 767319499}
-    - target: {fileID: 3030620061070837432, guid: a371ce623a776484cb6fed209413cf1d, type: 3}
+    - target: {fileID: 0}
       propertyPath: maxShotSpeed
       value: 100
       objectReference: {fileID: 0}
-    - target: {fileID: 3030620061070837432, guid: a371ce623a776484cb6fed209413cf1d, type: 3}
+    - target: {fileID: 0}
       propertyPath: bowstringBottom
       value: 
       objectReference: {fileID: 687985091}
@@ -5020,6 +5043,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3491689163877428654, guid: a371ce623a776484cb6fed209413cf1d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1545183270}
+    - targetCorrespondingSourceObject: {fileID: 3491689163877428654, guid: a371ce623a776484cb6fed209413cf1d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1545183271}
   m_SourcePrefab: {fileID: 100100000, guid: a371ce623a776484cb6fed209413cf1d, type: 3}
 --- !u!1001 &1572185253381920602
 PrefabInstance:
