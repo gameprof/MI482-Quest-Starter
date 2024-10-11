@@ -4,7 +4,7 @@ using UnityEngine;
 using QuickVR;
 
 
-public class Bow : MonoBehaviour {
+public class BowHand : MonoBehaviour {
     
     [Header( "Inscribed" )]
     public GameObject arrowPrefab;
