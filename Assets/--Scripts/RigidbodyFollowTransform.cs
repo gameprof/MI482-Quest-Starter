@@ -30,6 +30,6 @@ public class RigidbodyFollowTransform : MonoBehaviour {
     private void Update() {
         if ( transformToFollow == null ) return;
         Vector3 rotatedOffset = transformToFollow.rotation * offset;
-        rigid.Move(rotatedOffset, transformToFollow.rotation);
+        rigid.Move(transformToFollow.position + rotatedOffset, transformToFollow.rotation);
     }
 }
