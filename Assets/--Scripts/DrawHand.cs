@@ -14,6 +14,8 @@ public class DrawHand : MonoBehaviour {
 
     void Awake() {
         _S = this;
+        _shieldActive = true; // This forces the shield to actually updated when set to false on the next line
+        shieldActive = false;
     }
 
     void Update() {
