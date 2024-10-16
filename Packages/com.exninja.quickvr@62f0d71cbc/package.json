@@ -1,0 +1,25 @@
+{
+  "name": "com.exninja.quickvr",
+  "version": "1.0.0",
+  "displayName": "QuickVR",
+  "description": "A package of tools to quickly get state information from Meta Quest Controllers.",
+  "unity": "2022.3",
+  "documentationUrl": "https://github.com/gameprof/QuickVR",
+  "changelogUrl": "https://github.com/gameprof/QuickVR/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/gameprof/QuickVR/blob/main/LICENSE.md",
+  "dependencies": {
+    "com.meta.xr.sdk.core": "68.0.2",
+    "com.unity.xr.oculus": "4.2.0"
+  },
+  "keywords": [
+    "keyword1",
+    "keyword2",
+    "keyword3"
+  ],
+  "author": {
+    "name": "Jeremy Gibson Bond",
+    "email": "jeremy@exninja.com",
+    "url": "https://github.com/gameprof/"
+  },
+  "hideInEditor": false
+}
